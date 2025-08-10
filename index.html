@@ -103,7 +103,7 @@
                     alt="Shine smile"
                     class="header__logo"
                 />
-                <p class="header__logo--sub-title">
+                <p class="common__logo--sub-title">
                     shine<br /><span>smile</span>
                 </p>
                 <!-- Navigation -->
@@ -481,6 +481,122 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__content common__content">
+                <!-- Logo -->
+                <div class="footer__logo--wrap">
+                    <figure class="footer__logo">
+                        <img
+                            src="./assets/img/shine-logo.svg"
+                            alt="Shine smile"
+                            class="footer__logo"
+                        />
+                        <p class="common__logo--sub-title">
+                            shine<br /><span>smile</span>
+                        </p>
+                    </figure>
+                    <p class="footer__desc">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
+                </div>
+
+                <div class="footer__column">
+                    <div class="column--cover">
+                        <h3 class="column--title">Support</h3>
+                        <ul class="list">
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Help center</a>
+                            </li>
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Account information</a>
+                            </li>
+                            <li class="list--item">
+                                <a href="#!" class="list--link">About</a>
+                            </li>
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="column--cover">
+                        <h3 class="column--title">Support</h3>
+                        <ul class="list">
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Help center</a>
+                            </li>
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Account information</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <div class="column--cover">
+                        <h3 class="column--title">Support</h3>
+                        <ul class="list">
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Help center</a>
+                            </li>
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Account information</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="column--cover">
+                        <h3 class="column--title">Support</h3>
+                        <ul class="list">
+                            <li class="list--item">
+                                <a href="#!" class="list--link">Help center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <div class="column-cover">
+                        <h3 class="column--title">Stay In Touch</h3>
+                        <img src="./assets/img/Social.svg" alt="Social" class="footer--social">
+                    </div>
+
+                    <div class="column-cover">
+                        <h3 class="column--title">Subscribe</h3>
+                        <p class="column--desc footer__desc">Subscribe our newsletter for the latest update of Dental care</p>
+
+                        <form id="subscribeForm" class="subscribe-form">
+                            <label for="email">
+                                <input type="email" id="email" required autocomplete="email" placeholder="Enter your email...">
+                            </label>
+
+                            <button class="footer--btn" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Handle form submission with success animation
+            document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent actual form submission
+                
+                const btn = this.querySelector('.footer--btn');
+                const originalText = btn.textContent;
+                
+                // Add success class for animation
+                btn.classList.add('success');
+                btn.disabled = true;
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    btn.classList.remove('success');
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    
+                    // Clear the input
+                    document.getElementById('email').value = '';
+                }, 2000);
+            });
+        </script>
     </body>
 </html>
