@@ -10,10 +10,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 170px 0px;
 }
 
 /* ========== Common ========== */
@@ -40,27 +36,28 @@ body {
     opacity: 0.9;
 }
 
-.sticky {
+a {
+    text-decoration: none;
+}
+
+/* ========== Header-Star ========== */
+.header__start {
     position: sticky;
-    top: -28px;
-    z-index: 1;
+    top: -25px;
+    z-index: 100;
+    padding: 30px 0 5px;
     background: #10375c;
 }
 
-a {
-    text-decoration: none;
+.start__content {
+    display: flex;
+    align-items: center;
 }
 
 /* ========== Header ========== */
 .header {
     background: #10375c;
     padding: 30px 0 110px;
-    grid-area: 1 / 1 / 4 / 2;
-}
-/* Start */
-.header__start {
-    display: flex;
-    align-items: center;
 }
 
 .header__logo--sub-title {
@@ -219,6 +216,10 @@ a {
 }
 
 /* ========== Services ========== */
+.main__services {
+    margin-top: 170px;
+}
+
 .services__title {
     text-align: center;
     font-size: 5rem;
@@ -537,4 +538,51 @@ a {
     border: none;
     color: #fff;
     background: #2E80CE;
+}
+
+/* ========== App ========== */
+.main__app {
+    margin-top: calc(170px + 95px);
+}
+
+.app__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 75px 70px;
+    background: #2E80CE;
+}
+
+.app__image--cover {
+    position: absolute;
+    left: 70px;
+    bottom: -4px;
+}
+
+.app__body {
+    margin-left: auto;
+    width: 586px;
+    max-width: 100%;
+}
+
+.app__title {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2; /* 120% */
+    letter-spacing: -1px;
+    color: #FFF;
+}
+
+.app__desc {
+    margin-top: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.6667; /* 166.667% */
+    color: #FFF;
+}
+
+.app__link--download {
+    margin-top: 38px;
+    display: flex;
+    gap: 28px;
 }
