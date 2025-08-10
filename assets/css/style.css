@@ -778,13 +778,13 @@ a {
     font-family: var(--font-alt);
 }
 
-.footer__content {
-    padding: var(--space-100) 0 var(--space-42);
-}
-
 .footer__wrap {
     display: flex;
     gap: var(--space-78);
+}
+
+.footer__content {
+    padding: var(--space-100) 0 var(--space-42);
 }
 
 .footer__logo--wrap {
